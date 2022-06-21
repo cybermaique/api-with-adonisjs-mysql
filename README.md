@@ -11,6 +11,7 @@ Framework MVC para NodeJS. Ele é usado para criar aplicações webs e APIs, al�
 # Cmds
 <br>npm install -g @adonisjs/cli
 <br>adonis new api-new --api-only
+<brnpm install mysql
 
 <<<<<<< HEAD
 # Adonis API application
