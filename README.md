@@ -3,15 +3,8 @@ Framework MVC para NodeJS. Ele é usado para criar aplicações webs e APIs, al�
 
 # Quais suas vantagens?
 - Possui vantagens como a variedade de funcionalidades pré-implementadas que otimizam o nosso tempo de desenvolvendo. Além disso, ele tem um poderoso ORM, - possibilitando a nós desenvolvedores utilizarmos o SQL.
-
 - Boa estrutura para lidar com websockets (requisições em tempo real). Possui CLI.
-
 - Site oficial com instruções de instalação: https://docs.adonisjs.com/guides/installation
-
-# Cmds
-<br>npm install -g @adonisjs/cli
-<br>adonis new api-new --api-only
-<brnpm install mysql
 
 <<<<<<< HEAD
 # Adonis API application
