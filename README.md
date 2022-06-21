@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+# O que é o AdonisJS?
+Framework MVC para NodeJS. Ele é usado para criar aplicações webs e APIs, além de ser bastante similar ao Laravel do PHP.
+
+# Quais suas vantagens?
+- Possui vantagens como a variedade de funcionalidades pré-implementadas que otimizam o nosso tempo de desenvolvendo. Além disso, ele tem um poderoso ORM, - possibilitando a nós desenvolvedores utilizarmos o SQL.
+- Boa estrutura para lidar com websockets (requisições em tempo real). Possui CLI.
+- Site oficial com instruções de instalação: https://docs.adonisjs.com/guides/installation
+
+<<<<<<< HEAD
+>>>>>>> bfaa4941cf1bd312fd9e0732e2e4c5d4f93dcf31
 # Adonis API application
 
 This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
