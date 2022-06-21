@@ -1,21 +1,34 @@
 'use strict'
 
-/*
-|--------------------------------------------------------------------------
-| Routes
-|--------------------------------------------------------------------------
-|
-| Http routes are entry points to your web application. You can create
-| routes for different URLs and bind Controller actions to them.
-|
-| A complete guide on routing is available here.
-| http://adonisjs.com/docs/4.1/routing
-|
-*/
-
-/** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.get('/', () => {
-  return { greeting: 'Hello world in JSON' }
-})
+Route.post('/sessions', 'SessionController.create')
+Route.put('/sessions', 'SessionController.refreshToken')
+
+Route.resource('users', 'UserController').apiOnly().middleware(['auth:jwt', 'is:manager']).validator(new Map([
+  [['users.store'], ['User']], [['users.update'], ['User']]
+]))
+
+Route.resource('clients', 'ClientController').apiOnly().middleware(['auth:jwt', 'is:manager']).validator(new Map([
+  [['clients.store'], ['Client']], [['clients.update'], ['Client']]
+]))
+
+Route.resource('exercises', 'ExerciseController').apiOnly().middleware(['auth:jwt', 'can:gerenc_exercises', 'audit']).validator(new Map([
+  [['exercises.store'], ['Exercise']], [['exercises.update'], ['Exercise']]
+]))
+
+Route.resource('trainings', 'TrainingController').apiOnly().middleware(['auth:jwt', 'can:gerenc_trainings', 'audit']).validator(new Map([
+  [['trainings.store'], ['Training']], [['trainings.update'], ['Training']]
+]))
+
+Route.resource('permissions', 'PermissionController').apiOnly().middleware(['auth:jwt', 'is:manager']).validator(new Map([
+  [['permissions.store'], ['NameSlug']], [['permissions.update'], ['NameSlug']]
+]))
+
+Route.resource('roles', 'RoleController').apiOnly().middleware(['auth:jwt', 'is:manager']).validator(new Map([
+  [['roles.store'], ['NameSlug']], [['roles.update'], ['NameSlug']]
+]))
+
+Route.resource('products', 'ProductController').apiOnly().middleware(['auth:jwt', 'is:manager']).validator(new Map([
+  [['products.store'], ['Product']], [['products.update'], ['Product']]
+]))
